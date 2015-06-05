@@ -57,12 +57,12 @@ angular.module('starter', [
 
   // Each tab has its own nav history stack:
 
-  .state('tab.dash', {
-    url: '/dash',
+  .state('tab.quiz', {
+    url: '/quiz',
     views: {
-      'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
+      'tab-quiz': {
+        templateUrl: 'templates/tab-quiz.html',
+        controller: 'QuizCtrl'
       }
     }
   })
@@ -97,6 +97,6 @@ angular.module('starter', [
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/tab/quiz');
 
 });

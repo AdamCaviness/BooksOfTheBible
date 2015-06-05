@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope, $rootScope, $ionicUser, $ionicPush) {
+.controller('QuizCtrl', function($scope, $rootScope, $ionicUser, $ionicPush) {
   // Handles incoming device tokens
   $rootScope.$on('$cordovaPush:tokenReceived', function(event, data) {
     alert("Successfully registered token " + data.token);
