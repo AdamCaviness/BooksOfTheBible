@@ -1,3 +1,7 @@
+/// <reference path="../../typings/cordova/cordova.d.ts" />
+/// <reference path="../../typings/angularjs/angular.d.ts" />
+/// <reference path="../../typings/cordova/plugins/StatusBar.d.ts" />
+
 // BOTHB - Books of the Bible
 
 // angular.module is a global place for creating, registering and retrieving Angular modules

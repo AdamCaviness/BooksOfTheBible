@@ -1,9 +1,15 @@
 <ion-view view-title="Settings">
-  <ion-content>
+  <ion-content class="padding">
     <ion-list>
       <ion-toggle ng-model="settings.gamify">
           Gamify
       </ion-toggle>
+      <button class="button button-block button-dark" ng-click="identifyUser()">
+        Identify a user
+      </button>
+      <button class="button button-block button-positive" ng-if="identified" ng-click="pushRegister()">
+        Register for Push
+      </button>
     </ion-list>
   </ion-content>
 </ion-view>
