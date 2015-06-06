@@ -1,6 +1,5 @@
-/// <reference path="../../typings/cordova/cordova.d.ts" />
-/// <reference path="../../typings/angularjs/angular.d.ts" />
-/// <reference path="../../typings/cordova/plugins/StatusBar.d.ts" />
+/* global StatusBar */
+/// <reference path="../../typings/tsd.d.ts" />
 
 // BOTHB - Books of the Bible
 
