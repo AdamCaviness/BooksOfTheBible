@@ -1,6 +1,6 @@
 angular.module('bothb.controllers', [])
 
-.controller('QuizCtrl', function($scope, Chats) {
+.controller('QuizCtrl', function($scope, Quizzes) {
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
   // To listen for when this page is active (for example, to refresh data),
@@ -9,33 +9,22 @@ angular.module('bothb.controllers', [])
   //$scope.$on('$ionicView.enter', function(e) {
   //});
   
-  $scope.chats = Chats.all();
-  $scope.remove = function(chat) {
-    Chats.remove(chat);
+  $scope.quizzes = Quizzes.all();
+  $scope.remove = function(quiz) {
+    Quizzes.remove(quiz);
   };
+})
+
+.controller('QuizDetailCtrl', function($scope, $stateParams, Quizzes) {
+  $scope.quiz = Quizzes.get($stateParams.quizId);
 })
 
 .controller('StatsCtrl', function($scope) {
   
 })
 
-.controller('ChatsCtrl', function($scope, Chats) {
-  // With the new view caching in Ionic, Controllers are only called
-  // when they are recreated or on app start, instead of every page change.
-  // To listen for when this page is active (for example, to refresh data),
-  // listen for the $ionicView.enter event:
-  //
-  //$scope.$on('$ionicView.enter', function(e) {
-  //});
-  
-  $scope.chats = Chats.all();
-  $scope.remove = function(chat) {
-    Chats.remove(chat);
-  };
-})
+.controller('DonateCtrl', function($scope) {
 
-.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
-  $scope.chat = Chats.get($stateParams.chatId);
 })
 
 .controller('SettingsCtrl', function($scope, $rootScope, $ionicUser, $ionicPush) {

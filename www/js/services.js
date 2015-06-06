@@ -1,10 +1,7 @@
 angular.module('bothb.services', [])
 
-.factory('Chats', function() {
-  // Might use a resource here that returns a JSON array
-
-  // Some fake testing data
-  var chats = [{
+.factory('Quizzes', function() {
+  var quizzes = [{
     id: 0,
     name: 'Typo',
     lastText: 'Type the book name',
@@ -18,15 +15,15 @@ angular.module('bothb.services', [])
 
   return {
     all: function() {
-      return chats;
+      return quizzes;
     },
-    remove: function(chat) {
-      chats.splice(chats.indexOf(chat), 1);
+    remove: function(quiz) {
+      quizzes.splice(quizzes.indexOf(quiz), 1);
     },
-    get: function(chatId) {
-      for (var i = 0; i < chats.length; i++) {
-        if (chats[i].id === parseInt(chatId)) {
-          return chats[i];
+    get: function(quizId) {
+      for (var i = 0; i < quizzes.length; i++) {
+        if (quizzes[i].id === parseInt(quizId)) {
+          return quizzes[i];
         }
       }
       return null;

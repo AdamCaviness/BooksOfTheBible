@@ -69,6 +69,15 @@ angular.module('bothb', [
       }
     }
   })
+  .state('tab.quiz-detail', {
+      url: '/quiz/:quizId',
+      views: {
+        'tab-quiz': {
+          templateUrl: 'templates/quiz-detail.html',
+          controller: 'QuizDetailCtrl'
+        }
+      }
+    })
   
   .state('tab.stats', {
     url: '/stats',
@@ -80,21 +89,12 @@ angular.module('bothb', [
     }
   })
 
-  .state('tab.chats', {
-      url: '/chats',
+  .state('tab.donate', {
+      url: '/donate',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
-        }
-      }
-    })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
+        'tab-donate': {
+          templateUrl: 'templates/tab-donate.html',
+          controller: 'DonateCtrl'
         }
       }
     })
