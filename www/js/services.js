@@ -8,12 +8,12 @@ angular.module('bothb.services', [])
     id: 0,
     name: 'Typo',
     lastText: 'Type the book name',
-    face: '/img/type.svg'
+    face: '/img/typo.svg'
   }, {
     id: 1,
     name: 'Pick-nic',
     lastText: 'Pick from a list',
-    face: 'https://avatars3.githubusercontent.com/u/11214?v=3&s=460'
+    face: '/img/pick.svg'
   }];
 
   return {
