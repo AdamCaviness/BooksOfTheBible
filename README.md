@@ -1,7 +1,6 @@
 BooksOfTheBible
 ===============
-#Memorize the Books of the Bible and retain it!
-
+##Memorize the Books of the Bible and retain it!
 
 ### Contributions
 Any bug fixes or improvements are welcomed and appreciated.  Request a pull into the master if you like.
