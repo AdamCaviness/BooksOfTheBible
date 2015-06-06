@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+angular.module('bothb.controllers', [])
 
 .controller('QuizCtrl', function($scope, $rootScope, $ionicUser, $ionicPush) {
   // Handles incoming device tokens
@@ -69,7 +69,7 @@ angular.module('starter.controllers', [])
   $scope.chat = Chats.get($stateParams.chatId);
 })
 
-.controller('AccountCtrl', function($scope) {
+.controller('SettingsCtrl', function($scope) {
   $scope.settings = {
     gamify: true
   };

@@ -1,17 +1,17 @@
-// Ionic Starter App
+// BOTHB - Books of the Bible
 
 // angular.module is a global place for creating, registering and retrieving Angular modules
-// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
+// 'bothb' is the name of this angular module (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-// 'starter.services' is found in services.js
-// 'starter.controllers' is found in controllers.js
-angular.module('starter', [
+// 'bothb.services' is found in services.js
+// 'bothb.controllers' is found in controllers.js
+angular.module('bothb', [
   'ionic',
   'ngCordova',
   'ionic.service.core', 
   'ionic.service.push',  
-  'starter.controllers', 
-  'starter.services'
+  'bothb.controllers', 
+  'bothb.services'
 ])
 
 .run(function($ionicPlatform) {
@@ -86,12 +86,12 @@ angular.module('starter', [
       }
     })
 
-  .state('tab.account', {
-    url: '/account',
+  .state('tab.settings', {
+    url: '/settings',
     views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
+      'tab-settings': {
+        templateUrl: 'templates/tab-settings.html',
+        controller: 'SettingsCtrl'
       }
     }
   });
