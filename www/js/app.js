@@ -66,6 +66,16 @@ angular.module('bothb', [
       }
     }
   })
+  
+  .state('tab.stats', {
+    url: '/stats',
+    views: {
+      'tab-stats': {
+        templateUrl: 'templates/tab-stats.html',
+        controller: 'StatsCtrl'
+      }
+    }
+  })
 
   .state('tab.chats', {
       url: '/chats',
