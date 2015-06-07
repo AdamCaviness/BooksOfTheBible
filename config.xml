@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget id="com.ionicframework.booksofthebible357012" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>BooksOfTheBible</name>
+  <name>Books of the Bible</name>
   <description>
-        An Ionic Framework and Cordova project.
+        Memorize the books of the Bible and retain them!
     </description>
-  <author email="hi@ionicframework" href="http://ionicframework.com/">
-      Ionic Framework Team
-    </author>
+  <author email="adamcaviness@gmail.com" href="http://github.com/adamcaviness">
+      Adam Caviness
+  </author>
   <content src="index.html"/>
   <access origin="*"/>
   <preference name="webviewbounce" value="false"/>
