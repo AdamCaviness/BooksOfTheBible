@@ -38,6 +38,8 @@ angular.module('bothb', [
     app_id: 'a1597866',
     // The public API key all services will use for this app
     api_key: 'ca4682010b345ab257660534f1532ab4ed71f57fd283ba12',
+    // The GCM project number
+    gcm_id: '101190536232',
     // Set the app to use development pushes
     dev_push: true
   });

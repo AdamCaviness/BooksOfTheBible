@@ -34,6 +34,7 @@ angular.module('bothb.controllers', [])
   $rootScope.$on('$cordovaPush:tokenReceived', function(event, data) {
     alert("Successfully registered token " + data.token);
     console.log('Ionic Push: Got token ', data.token, data.platform);
+    // Do something useful with the token
     $scope.token = data.token;
   });
 
