@@ -2,9 +2,9 @@
   <ion-content>
     <ion-list>
       <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="quiz in quizzes" type="item-text-wrap" href="#/tab/quiz/{{quiz.id}}">
-        <img ng-src="{{quiz.face}}">
+        <img ng-src="{{quiz.symbology}}" style="width:24px; height:24px;">
         <h2>{{quiz.name}}</h2>
-        <p>{{quiz.lastText}}</p>
+        <p>{{quiz.quizDesc}}</p>
         <i class="icon ion-chevron-right icon-accessory"></i>
 
         <ion-option-button class="button-assertive" ng-click="remove(quiz)">

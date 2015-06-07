@@ -4,13 +4,13 @@ angular.module('bothb.services', [])
   var quizzes = [{
     id: 0,
     name: 'Typo',
-    lastText: 'Type the book name',
-    face: '/img/typo.png'
+    quizDesc: 'Type the book name',
+    symbology: './img/typo.png'
   }, {
     id: 1,
     name: 'Pick-nic',
-    lastText: 'Pick from a list',
-    face: '/img/pick.png'
+    quizDesc: 'Pick from a list',
+    symbology: './img/pick.png'
   }];
 
   return {

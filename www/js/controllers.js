@@ -1,3 +1,5 @@
+/// <reference path="../../typings/tsd.d.ts" />
+
 angular.module('bothb.controllers', [])
 
 .controller('QuizCtrl', function($scope, Quizzes) {
