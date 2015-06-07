@@ -2,8 +2,8 @@
 <widget id="com.ionicframework.booksofthebible357012" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>Books of the Bible</name>
   <description>
-        Memorize the books of the Bible and retain them!
-    </description>
+      Memorize the books of the Bible and retain them!
+  </description>
   <author email="adamcaviness@gmail.com" href="http://github.com/adamcaviness">
       Adam Caviness
   </author>
