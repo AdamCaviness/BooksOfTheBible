@@ -17,8 +17,9 @@ angular.module('bothb.controllers', [])
   };
 })
 
-.controller('QuizDetailCtrl', function($scope, $stateParams, Quizzes) {
+.controller('QuizDetailCtrl', function($scope, $stateParams, Quizzes, Books) {
   $scope.quiz = Quizzes.get($stateParams.quizId);
+  $scope.books = Books.all();
 })
 
 .controller('StatsCtrl', function($scope) {

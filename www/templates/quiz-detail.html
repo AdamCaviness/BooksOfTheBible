@@ -1,7 +1,15 @@
 <ion-view view-title="{{quiz.name}}">
-  <ion-content class="padding">
-    <p>
-      {{quiz.quizDesc}}
-    </p>
-  </ion-content>
+   <ion-content class="padding">
+        <ion-list class="padding">
+            <button class="book-tag" class="item-remove-animate" ng-repeat="book in books" type="item-text-wrap">
+              <div class="nav" style="float:left;">
+                <a href="#">
+                  <span class="icon-home"></span>
+                  <span class="screen-reader-text">{{book.name}}</span>
+                </a>
+              </div>
+              <span style="display:inline;margin-left:10px;">{{book.name}}</span>
+            </button>
+        </ion-list>
+      </ion-content>
 </ion-view>

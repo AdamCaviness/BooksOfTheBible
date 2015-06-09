@@ -29,4 +29,34 @@ angular.module('bothb.services', [])
       return null;
     }
   };
+})
+
+.factory('Books', function() {
+  var books = [{
+    id: 0,
+    name: 'Job'
+  }, {
+    id: 1,
+    name: 'Psalms'
+  }, {
+    id: 2,
+    name: 'Proverbs'
+  }];
+
+  return {
+    all: function() {
+      return books;
+    },
+    remove: function(book) {
+      books.splice(books.indexOf(book), 1);
+    },
+    get: function(bookId) {
+      for (var i = 0; i < books.length; i++) {
+        if (books[i].id === parseInt(bookId)) {
+          return books[i];
+        }
+      }
+      return null;
+    }
+  };
 });
