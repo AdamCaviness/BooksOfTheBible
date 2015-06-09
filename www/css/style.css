@@ -1,13 +1,23 @@
+.book-tag-wrapper {
+  margin:5px;
+}
 .book-tag {
   width:75%;
-  height:40px;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  border-radius: 25px;
+  height:55px;
+  -webkit-border-radius: 38px;
+  -moz-border-radius: 38px;
+  border-radius: 38px;
   border:2px solid #E8E8EB;
   background-color:#FFF;
   text-align: left;
-  margin:5px;
+  display: block;
+  margin:auto;
+}
+.book-tag-text {
+  display:inline;
+  margin-left:10px;
+  font-size: 2em;
+  color:#595959;
 }
 
 .screen-reader-text {
@@ -30,7 +40,7 @@
 [class*="icon-"] {
   font-family: 'fontello';
   font-style: normal;
-  font-size: 1em;
+  font-size: 2em;
   speak: none;
 }
 
@@ -48,7 +58,7 @@
 }
 
 ion-content {
-  background: #f7f7f7 url(http://css-tricks.com/examples/RoundButtons/images/bg.png) repeat center top;
+  background: url(http://css-tricks.com/examples/RoundButtons/images/bg.png) repeat center top;
 }
 
 .nav {
@@ -73,13 +83,13 @@ ion-content {
   background-image: -o-linear-gradient(top, #f7f7f7, #e7e7e7); 
   color: #a7a7a7;
   margin:5px;
-  width: 24px;
-  height: 24px;
+  width: 41px;
+  height: 40px;
   position: relative;
   text-align: center;
-  line-height: 21px;
+  line-height: 33px;
   border-radius: 50%;
-  box-shadow: 0px 2px 4px #aaa, inset 0px 2px 3px #fff;
+  box-shadow: 0px 3px 6px #aaa, inset 0px 2px 3px #fff;
   border: solid 1px transparent;
 }
 
@@ -95,7 +105,7 @@ ion-content {
   right: -8px;
   z-index: -1;
   border-radius: 50%;
-  box-shadow: inset 0px 4px 7px #ddd;
+  box-shadow: inset 0px 5px 8px #ddd;
 }
 
 .nav a:active {
