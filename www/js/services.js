@@ -41,6 +41,9 @@ angular.module('bothb.services', [])
   }, {
     id: 2,
     name: 'Proverbs'
+  }, {
+    id: 3,
+    name: 'Song of Songs'
   }];
 
   return {
