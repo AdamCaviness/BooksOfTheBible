@@ -1,5 +1,6 @@
 .book-tag-icon {
   float:left;
+  font-size:24px;
   margin-right:10px;
 }
 .book-tag {
@@ -17,9 +18,9 @@
 .book-tag-text {
   display:block;
   float:middle;
-  margin-top:6px;
+  margin-top:8px;
   font-size: 1.8em;
-  color:#757575;
+  color:#878787;
 }
 
 .screen-reader-text {
@@ -27,29 +28,6 @@
   top: -9999px;
   left: -9999px;
 }
-
-@font-face {
-      font-family: 'fontello';
-      src: url('./font/fontello.eot?75398140');
-      src: url('./font/fontello.eot?75398140#iefix') format('embedded-opentype'),
-           url('./font/fontello.woff?75398140') format('woff'),
-           url('./font/fontello.ttf?75398140') format('truetype'),
-           url('./font/fontello.svg?75398140#fontello') format('svg');
-      font-weight: normal;
-      font-style: normal;
-    }
-
-[class*="icon-"] {
-  font-family: 'fontello';
-  font-style: normal;
-  font-size: 2em;
-  speak: none;
-}
-
-.icon-home:after     { content: "\2302"; } 
-.icon-cog:after      { content: "\2699"; } 
-.icon-cw:after       { content: "\27f3"; } 
-.icon-location:after { content: "\e724"; } 
 
 * { 
   -webkit-box-sizing: border-box; 
@@ -59,7 +37,7 @@
   padding: 0;
 }
 
-ion-content {
+.quiz-bg {
   background: url(../img/quiz-bg.png) repeat center top;
 }
 
@@ -84,15 +62,15 @@ ion-content {
   background-image: -ms-linear-gradient(top, #f7f7f7, #e7e7e7); 
   background-image: -o-linear-gradient(top, #f7f7f7, #e7e7e7); 
   color: #a7a7a7;
-  margin: 5px;
+  margin: 4px;
   width: 41px;
   height: 41px;
   position: relative;
   text-align: center;
-  line-height: 34px;
+  line-height: 42px;
   box-shadow: 0px 3px 4px #aaa, inset 0px 2px 3px #fff;
   border-radius: 50%;
-  border: solid 1px #eeeeee;
+  border: solid 1.8px #eeeeee;
 }
 
 .nav a:before {
@@ -110,7 +88,7 @@ ion-content {
   box-shadow: inset 0px 3px 4px #ddd;
 }
 
-.nav a:active {
+.nav a:active, .item-content.activated {
   box-shadow: 0px 3px 4px #aaa inset, 0px 2px 3px #fff;
 }
 
