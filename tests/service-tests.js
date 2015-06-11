@@ -1,4 +1,6 @@
-describe('getting books', function($scope, Books) {
+/// <reference path="../typings/tsd.d.ts" />
+
+describe('getting books', function() {
 	var Books;
 	beforeEach(module('bothb.services'));
 	
@@ -34,5 +36,20 @@ describe('getting books', function($scope, Books) {
 		var books = Books.testament(testamentName);
 		expect(books[0].name).toEqual('Matthew');
 		expect(books[26].name).toEqual('Revelation');
+	}));
+	
+	it('returns random selection of books', inject(function(Books) {
+		var desiredNumberOfBooks= 5;
+		var allBooks = Books.all();
+		var books = Books.randomSelection(desiredNumberOfBooks);
+		expect(books.length).toEqual(5);
+		console.log('Random selection: ' + books.map(function(x){
+			return x.name;
+		}));
+		
+		// Verify of the random selection is in the complete set.
+		for (var i = 0; i < books.length; i++) {
+			expect(allBooks.indexOf(books[i])).toBeGreaterThan(-1);
+		}
 	}));
 });

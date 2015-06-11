@@ -377,6 +377,14 @@ angular.module('bothb.services', [])
         return books.slice(39, 66);
       }
     },
+    randomSelection : function(numberDesired) {
+      var selection = [];
+      for (var i = 0; i < numberDesired; i++) {
+        var id = randomIntFromInterval(1, 66);
+        selection.push(books[id]);        
+      }
+      return selection;
+    },
     remove: function(book) {
       books.splice(books.indexOf(book), 1);
     },
@@ -390,3 +398,8 @@ angular.module('bothb.services', [])
     }
   };
 });
+
+function randomIntFromInterval(min,max)
+{
+    return Math.floor(Math.random()*(max-min+1)+min);
+}
