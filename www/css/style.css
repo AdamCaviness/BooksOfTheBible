@@ -63,6 +63,7 @@
   background-image: -o-linear-gradient(top, #f7f7f7, #e7e7e7); 
   color: #a7a7a7;
   margin: 4px;
+  margin-top: 2px;
   width: 41px;
   height: 41px;
   position: relative;
@@ -88,8 +89,12 @@
   box-shadow: inset 0px 3px 4px #ddd;
 }
 
-.nav a:active, .item-content.activated {
+.nav a:active {
   box-shadow: 0px 3px 4px #aaa inset, 0px 2px 3px #fff;
+}
+
+.item-content.activated {
+  box-shadow: 0 0 0 2pt #0B9E43;
 }
 
 .nav a:hover {

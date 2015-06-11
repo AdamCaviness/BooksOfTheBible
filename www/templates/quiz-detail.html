@@ -2,7 +2,7 @@
   <ion-content class="padding quiz-bg">
     <ion-list>
       <button class="book-tag item-content item-remove-animate" style="margin-top:20px;" ng-repeat="book in books" type="item-text-wrap">
-        <div class="nav book-tag-icon">
+        <div class="nav book-tag-icon" data-tap-disabled="true">
           <a href="#">
             <span class="ion-qr-scanner"></span>
             <span class="screen-reader-text">{{book.name}}</span>
