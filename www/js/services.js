@@ -370,10 +370,12 @@ angular.module('bothb.services', [])
       return books;
     },
     testament: function(name) {
-      if (name === 'old')
-        return books.slice(1, 39);  
-      else
-        return books.slice(40, 66);
+      if (name === 'old') {
+        return books.slice(0, 39);
+      }  
+      else {
+        return books.slice(39, 66);
+      }
     },
     remove: function(book) {
       books.splice(books.indexOf(book), 1);
