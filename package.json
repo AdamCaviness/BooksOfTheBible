@@ -2,6 +2,10 @@
   "name": "booksofthebible",
   "version": "1.0.0",
   "description": "Memorize the books of the Bible and retain them!",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/AdamCaviness/BooksOfTheBible.git"
+  },
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^1.3.3",
@@ -14,7 +18,8 @@
     "gulp-util": "^2.2.14",
     "shelljs": "^0.3.0",
     "karma": "~0.10",
-    "karma-phantomjs-launcher": "~0.1"
+    "karma-phantomjs-launcher": "~0.1",
+    "cordova-uglify": "^0.1.5"
   },
   "cordovaPlugins": [
     "cordova-plugin-device",
