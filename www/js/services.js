@@ -378,12 +378,21 @@ angular.module('bothb.services', [])
       }
     },
     randomSelection : function(numberDesired) {
-      var selection = [];
-      for (var i = 0; i < numberDesired; i++) {
-        var id = randomIntFromInterval(1, 66);
-        selection.push(books[id]);        
+      try {
+        var selection = [];
+        for (var i = 0; i < numberDesired; i++) {
+          var id = randomIntFromInterval(1, 66);
+          selection.push(books[id]);        
+        }
+        console.log('selection was: ' + selection.map(function(x){
+    			return x.name;
+    		}));
+        return selection;
+      } catch (e) {
+        console.log(e);
+        console.log(e.stack);
+        console.log(e.line);
       }
-      return selection;
     },
     remove: function(book) {
       books.splice(books.indexOf(book), 1);

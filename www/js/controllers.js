@@ -17,10 +17,10 @@ angular.module('bothb.controllers', [])
   };
 })
 
-.controller('QuizDetailCtrl', function($scope, $stateParams, Quizzes, Books) {
+.controller('QuizDetailCtrl', ['$scope', '$stateParams', 'Quizzes', 'Books', function($scope, $stateParams, Quizzes, Books) {
   $scope.quiz = Quizzes.get($stateParams.quizId);
   $scope.books = Books.randomSelection(5);
-})
+}])
 
 .controller('StatsCtrl', function($scope) {
   
