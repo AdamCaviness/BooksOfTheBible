@@ -2,6 +2,15 @@
 
 angular.module('bothb.services', [])
 
+.factory('$exceptionHandler', function($log) {
+  return function (exception, cause) {
+    if (cause) {
+      $log.error('exception cause:', cause);
+    }
+    throw exception;
+  };
+})
+
 .factory('Quizzes', function() {
   var quizzes = [{
     id: 0,
