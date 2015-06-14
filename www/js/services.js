@@ -390,12 +390,14 @@ angular.module('bothb.services', [])
       try {
         var selection = [];
         for (var i = 0; i < numberDesired; i++) {
-          var id = randomIntFromInterval(1, 66);
+          var id;
+          do {
+            id = randomIntFromInterval(0, 65);
+          }
+          while (selection.indexOf(id) > -1)
+          
           selection.push(books[id]);        
         }
-        console.log('selection was: ' + selection.map(function(x){
-    			return x.name;
-    		}));
         return selection;
       } catch (e) {
         console.log(e);
