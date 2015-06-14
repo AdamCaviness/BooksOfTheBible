@@ -1,5 +1,5 @@
 <ion-view view-title="{{quiz.name}}">
-  <ion-pane class="quiz-center quiz-bg">
+  <ion-content class="quiz-center quiz-bg">
     <ion-list>
       <button class="book-tag item-content item-remove-animate" style="margin-top:20px;" ng-repeat="book in books track by $index" type="item-text-wrap">
         <div class="nav book-tag-icon" data-tap-disabled="true">
@@ -11,5 +11,5 @@
         <span class="book-tag-text">{{book.name}}</span>
       </button>
     </ion-list>
-  </ion-pane>
+  </ion-content>
 </ion-view>
