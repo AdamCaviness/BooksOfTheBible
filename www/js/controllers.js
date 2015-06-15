@@ -17,18 +17,30 @@ angular.module('bothb.controllers', [])
   };
 })
 
-.controller('QuizDetailCtrl', function($scope, $stateParams, Quizzes, Books) {
+.controller('QuizDetailCtrl', function($scope, $stateParams, $timeout, Quizzes, Books) {
   $scope.bookActivated = false;
   $scope.currentBookIndex = -1;
   $scope.correctBookIndex = $scope.currentBookIndex + 1;
   $scope.books = Books.randomSelection($scope.correctBookIndex, 5);
   $scope.quiz = Quizzes.get($stateParams.quizId);
-  
-  $scope.onBookTap = function(bookId) {
-    console.log('Book tapped: id = ' + bookId);
-    if ($scope.correctBookIndex === bookId) {
-      $scope.currentBookIndex = bookId;
+ 
+  $scope.onBookTap = function(book) {
+    console.log('Book tapped: ' + book.name);
+    console.log('Book tapped: id = ' + book.id);
+    book.activated = !book.activated;
+    
+    if ($scope.correctBookIndex === book.id) {
+      $scope.currentBookIndex = book.id;
+      var correctBookIndex = book.id + 1;
+      $scope.correctBookIndex = correctBookIndex;
+      $scope.books = Books.randomSelection(correctBookIndex, 5);
+      // $timeout(function() {
+      //   $scope.books = Books.randomSelection(correctBookIndex, 5);
+      // }, 1000);
     }
+    // $timeout(function() {
+    //   book.activated = !book.activated;
+    // }, 500);
   };
 })
 
