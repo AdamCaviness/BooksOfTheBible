@@ -39,9 +39,10 @@ describe('getting books', function() {
 	}));
 	
 	it('returns random selection of books', inject(function(Books) {
+		var correctBookIndex = 3;
 		var desiredNumberOfBooks= 5;
 		var allBooks = Books.all();
-		var books = Books.randomSelection(desiredNumberOfBooks);
+		var books = Books.randomSelection(correctBookIndex, desiredNumberOfBooks);
 		expect(books.length).toEqual(5);
 		console.log('Random selection: ' + books.map(function(x){
 			return x.name;
