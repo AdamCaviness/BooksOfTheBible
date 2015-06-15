@@ -1,15 +1,7 @@
 <ion-view view-title="{{quiz.name}}">
-  <ion-content class="quiz-center quiz-bg">
-    <ion-list>
-      <button class="book-tag item-content item-remove-animate" style="margin-top:20px;" ng-repeat="book in books track by $index" type="item-text-wrap">
-        <div class="nav book-tag-icon" data-tap-disabled="true">
-          <a href="#">
-            <span class="ion-qr-scanner"></span>
-            <span class="screen-reader-text">{{book.name}}</span>
-          </a>
-        </div>
-        <span class="book-tag-text">{{book.name}}</span>
-      </button>
-    </ion-list>
+  <ion-content class="quiz-center">
+      <p ng-repeat="book in books track by $index">
+        <button class="button button-outline icon icon-left book-tag" ng-class="{'button-balanced' : bookActivated && book.id === correctBookIndex, 'button-assertive': bookActivated && book.id !== correctBookIndex}" on-tap="onBookTap({{book.id}}); bookActivated = !bookActivated">{{book.name}}</button>
+      </p>
   </ion-content>
 </ion-view>

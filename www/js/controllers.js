@@ -17,10 +17,20 @@ angular.module('bothb.controllers', [])
   };
 })
 
-.controller('QuizDetailCtrl', ['$scope', '$stateParams', 'Quizzes', 'Books', function($scope, $stateParams, Quizzes, Books) {
+.controller('QuizDetailCtrl', function($scope, $stateParams, Quizzes, Books) {
+  $scope.bookActivated = false;
+  $scope.currentBookIndex = -1;
+  $scope.correctBookIndex = $scope.currentBookIndex + 1;
+  $scope.books = Books.randomSelection($scope.correctBookIndex, 5);
   $scope.quiz = Quizzes.get($stateParams.quizId);
-  $scope.books = Books.randomSelection(5);
-}])
+  
+  $scope.onBookTap = function(bookId) {
+    console.log('Book tapped: id = ' + bookId);
+    if ($scope.correctBookIndex === bookId) {
+      $scope.currentBookIndex = bookId;
+    }
+  };
+})
 
 .controller('StatsCtrl', function($scope) {
   
