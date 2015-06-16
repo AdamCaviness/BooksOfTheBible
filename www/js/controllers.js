@@ -32,18 +32,21 @@ angular.module('bothb.controllers', [])
     
     if ($scope.correctBookIndex === book.id) {
       $scope.currentBookIndex = book.id;
-      var correctBookIndex = book.id + 1;
-      $scope.correctBookIndex = correctBookIndex;
+      $scope.correctBookIndex = $scope.currentBookIndex + 1;
+      button.removeClass('shake shake-sane');
       button.removeClass('button-assertive');
       button.addClass('button-balanced');
       $timeout(function() {
-        $scope.books = Books.randomSelection(correctBookIndex, 5);
+        button.removeClass('button-balanced');
+        $scope.books = Books.randomSelection($scope.correctBookIndex, 5);
       }, 100);
     }
     else {
       button.addClass('button-assertive');
+      button.addClass('shake shake-sane');
       $timeout(function() {
         button.removeClass('button-assertive');
+        button.removeClass('shake shake-sane');
       }, 500);
     }
   };

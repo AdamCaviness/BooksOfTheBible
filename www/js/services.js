@@ -46,332 +46,332 @@ angular.module('bothb.services', [])
   var books = [{
     id: 0,
     name: 'Genesis',
-    testament: 'old',
+    testament: 'old'
     },
 {
     id: 1,
     name: 'Exodus',
-    testament: 'old',
+    testament: 'old'
     },
 {
     id: 2,
     name: 'Leviticus',
-    testament: 'old',
+    testament: 'old'
     },
 {
     id: 3,
     name: 'Numbers',
-    testament: 'old',
+    testament: 'old'
     },
 {
     id: 4,
     name: 'Deuteronomy',
-    testament: 'old',
+    testament: 'old'
     },
 {
     id: 5,
     name: 'Joshua',
-    testament: 'old',
+    testament: 'old'
     },
 {
     id: 6,
     name: 'Judges',
-    testament: 'old',
+    testament: 'old'
     },
 {
     id: 7,
     name: 'Ruth',
-    testament: 'old',
+    testament: 'old'
     },
 {
     id: 8,
     name: '1 Samuel',
-    testament: 'old',
+    testament: 'old'
     },
 {
     id: 9,
     name: '2 Samuel',
-    testament: 'old',
+    testament: 'old'
     },
 {
     id: 10,
     name: '1 Kings',
-    testament: 'old',
+    testament: 'old'
     },
 {
     id: 11,
     name: '2 Kings',
-    testament: 'old',
+    testament: 'old'
     },
 {
     id: 12,
     name: '1 Chronicles',
-    testament: 'old',
+    testament: 'old'
     },
 {
     id: 13,
     name: '2 Chronicles',
-    testament: 'old',
+    testament: 'old'
     },
 {
     id: 14,
     name: 'Ezra',
-    testament: 'old',
+    testament: 'old'
     },
 {
     id: 15,
     name: 'Nehemiah',
-    testament: 'old',
+    testament: 'old'
     },
 {
     id: 16,
     name: 'Esther',
-    testament: 'old',
+    testament: 'old'
     },
 {
     id: 17,
     name: 'Job',
-    testament: 'old',
+    testament: 'old'
     },
 {
     id: 18,
     name: 'Psalms',
-    testament: 'old',
+    testament: 'old'
     },
 {
     id: 19,
     name: 'Proverbs',
-    testament: 'old',
+    testament: 'old'
     },
 {
     id: 20,
     name: 'Ecclesiastes',
-    testament: 'old',
+    testament: 'old'
     },
 {
     id: 21,
     name: 'Song of Songs',
-    testament: 'old',
+    testament: 'old'
     },
 {
     id: 22,
     name: 'Isaiah',
-    testament: 'old',
+    testament: 'old'
     },
 {
     id: 23,
     name: 'Jeremiah',
-    testament: 'old',
+    testament: 'old'
     },
 {
     id: 24,
     name: 'Lamentations',
-    testament: 'old',
+    testament: 'old'
     },
 {
     id: 25,
     name: 'Ezekiel',
-    testament: 'old',
+    testament: 'old'
     },
 {
     id: 26,
     name: 'Daniel',
-    testament: 'old',
+    testament: 'old'
     },
 {
     id: 27,
     name: 'Hosea',
-    testament: 'old',
+    testament: 'old'
     },
 {
     id: 28,
     name: 'Joel',
-    testament: 'old',
+    testament: 'old'
     },
 {
     id: 29,
     name: 'Amos',
-    testament: 'old',
+    testament: 'old'
     },
 {
     id: 30,
     name: 'Obadiah',
-    testament: 'old',
+    testament: 'old'
     },
 {
     id: 31,
     name: 'Jonah',
-    testament: 'old',
+    testament: 'old'
     },
 {
     id: 32,
     name: 'Micah',
-    testament: 'old',
+    testament: 'old'
     },
 {
     id: 33,
     name: 'Nahum',
-    testament: 'old',
+    testament: 'old'
     },
 {
     id: 34,
     name: 'Habakkuk',
-    testament: 'old',
+    testament: 'old'
     },
 {
     id: 35,
     name: 'Zephaniah',
-    testament: 'old',
+    testament: 'old'
     },
 {
     id: 36,
     name: 'Haggai',
-    testament: 'old',
+    testament: 'old'
     },
 {
     id: 37,
     name: 'Zechariah',
-    testament: 'old',
+    testament: 'old'
     },
 {
     id: 38,
     name: 'Malachi',
-    testament: 'old',
+    testament: 'old'
     },
  {
     id: 39,
     name: 'Matthew',
-    testament: 'new',
+    testament: 'new'
     },
  {
     id: 40,
     name: 'Mark',
-    testament: 'new',
+    testament: 'new'
     },
  {
     id: 41,
     name: 'Luke',
-    testament: 'new',
+    testament: 'new'
     },
  {
     id: 42,
     name: 'John',
-    testament: 'new',
+    testament: 'new'
     },
  {
     id: 43,
     name: 'Acts',
-    testament: 'new',
+    testament: 'new'
     },
  {
     id: 44,
     name: 'Romans',
-    testament: 'new',
+    testament: 'new'
     },
  {
     id: 45,
     name: '1 Corinthians',
-    testament: 'new',
+    testament: 'new'
     },
  {
     id: 46,
     name: '2 Corinthians',
-    testament: 'new',
+    testament: 'new'
     },
  {
     id: 47,
     name: 'Galatians',
-    testament: 'new',
+    testament: 'new'
     },
  {
     id: 48,
     name: 'Ephesians',
-    testament: 'new',
+    testament: 'new'
     },
  {
     id: 49,
     name: 'Philippians',
-	 testament: 'new',
+	 testament: 'new'
     },
  {
     id: 50,
     name: 'Colossians',
-    testament: 'new',
+    testament: 'new'
     },
  {
     id: 51,
     name: '1 Thessalonians',
-    testament: 'new',
+    testament: 'new'
     },
  {
     id: 52,
     name: '2 Thessalonians',
-    testament: 'new',
+    testament: 'new'
     },
  {
     id: 53,
     name: '1 Timothy',
-    testament: 'new',
+    testament: 'new'
     },
  {
     id: 54,
     name: '2 Timothy',
-    testament: 'new',
+    testament: 'new'
     },
  {
     id: 55,
     name: 'Titus',
-    testament: 'new',
+    testament: 'new'
     },
  {
     id: 56,
     name: 'Philemon',
-    testament: 'new',
+    testament: 'new'
     },
  {
     id: 57,
     name: 'Hebrews',
-    testament: 'new',
+    testament: 'new'
     },
  {
     id: 58,
     name: 'James',
-    testament: 'new',
+    testament: 'new'
     },
  {
     id: 59,
     name: '1 Peter',
-    testament: 'new',
+    testament: 'new'
     },
  {
     id: 60,
     name: '2 Peter',
-    testament: 'new',
+    testament: 'new'
     },
  {
     id: 61,
     name: '1 John',
-    testament: 'new',
+    testament: 'new'
     },
  {
     id: 62,
     name: '2 John',
-    testament: 'new',
+    testament: 'new'
     },
  {
     id: 63,
     name: '3 John',
-    testament: 'new',
+    testament: 'new'
     },
  {
     id: 64,
     name: 'Jude',
-    testament: 'new',
+    testament: 'new'
     },
  {
     id: 65,
     name: 'Revelation',
-    testament: 'new',
+    testament: 'new'
     }];
 
   return {
@@ -388,6 +388,10 @@ angular.module('bothb.services', [])
     },
     randomSelection : function(correctBookIndex, numberDesired) {
       console.log('correctBookIndex is ' + correctBookIndex);
+      var previousBookIndex = 0;
+      if (correctBookIndex > 0) {
+        previousBookIndex = correctBookIndex - 1;
+      } 
       try {
         var selection = [];
         var randomPosForCorrectBook = randomIntFromInterval(0, 4);
@@ -396,7 +400,7 @@ angular.module('bothb.services', [])
           do {
             id = randomIntFromInterval(0, 65);
           }
-          while (selection.indexOf(books[id]) > -1)
+          while (selection.indexOf(books[id]) > -1 || id === previousBookIndex)
           
           selection.push(books[id]);        
         }

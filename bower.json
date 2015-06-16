@@ -8,5 +8,8 @@
     "ionic-service-push": "~0.1.4",
     "ionic-service-deploy": "~0.0.6",
     "angular-mocks": "latest"
+  },
+  "dependencies": {
+    "csshake": "*"
   }
 }
