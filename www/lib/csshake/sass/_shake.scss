@@ -77,7 +77,6 @@ $state:running;
 @include shake(20px, 20px, 7deg, 'shake-slow', 2);
 @include shake(20px, 20px, 7deg, 'shake-hard', 2);
 @include shake(20px, 0px, 0deg, 'shake-horizontal', 2);
-@include shake(7px, 20px, 0deg, 'shake-sane', 2);
 @include shake(0px, 20px, 0deg, 'shake-vertical', 2);
 @include shake(0px, 0px, 15deg, 'shake-rotate', 2);
 @include shake(10px, 10px, 5deg, 'shake-opacity', 10, true);
