@@ -24,23 +24,28 @@ angular.module('bothb.controllers', [])
   $scope.books = Books.randomSelection($scope.correctBookIndex, 5);
   $scope.quiz = Quizzes.get($stateParams.quizId);
  
-  $scope.onBookTap = function(book) {
+  $scope.onBookTap = function(event, book) {
     console.log('Book tapped: ' + book.name);
     console.log('Book tapped: id = ' + book.id);
-    book.activated = !book.activated;
+    var button = angular.element(event.target);
+    console.log('button is ' + button);
     
     if ($scope.correctBookIndex === book.id) {
       $scope.currentBookIndex = book.id;
       var correctBookIndex = book.id + 1;
       $scope.correctBookIndex = correctBookIndex;
-      $scope.books = Books.randomSelection(correctBookIndex, 5);
-      // $timeout(function() {
-      //   $scope.books = Books.randomSelection(correctBookIndex, 5);
-      // }, 1000);
+      button.removeClass('button-assertive');
+      button.addClass('button-balanced');
+      $timeout(function() {
+        $scope.books = Books.randomSelection(correctBookIndex, 5);
+      }, 100);
     }
-    // $timeout(function() {
-    //   book.activated = !book.activated;
-    // }, 500);
+    else {
+      button.addClass('button-assertive');
+      $timeout(function() {
+        button.removeClass('button-assertive');
+      }, 500);
+    }
   };
 })
 

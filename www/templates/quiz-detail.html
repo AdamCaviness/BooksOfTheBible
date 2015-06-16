@@ -1,7 +1,7 @@
 <ion-view view-title="{{quiz.name}}">
   <ion-content class="quiz-center">
       <p ng-repeat="book in books">
-        <button class="button button-outline icon icon-left book-tag" ng-class="{'button-balanced' : book.id === correctBookIndex, 'button-assertive': book.id !== correctBookIndex}" on-tap="onBookTap({{book}});">{{book.name}}</button>
+        <button id="bookButton" class="button button-outline icon icon-left book-tag" on-tap="onBookTap($event, {{book}});">{{book.name}}</button>
       </p>
   </ion-content>
 </ion-view>
