@@ -85,6 +85,9 @@
     },
     "cordova/plugins/InAppBrowser.d.ts": {
       "commit": "8c7444882a2bc2ab87387f8f736a7d97e89b9c90"
+    },
+    "gulp-sass/gulp-sass.d.ts": {
+      "commit": "5156f56a6efe779c31cfcc8e54a22b409ed63d77"
     }
   }
 }
