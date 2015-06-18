@@ -1,6 +1,6 @@
 {
   "name": "Books of the Bible",
-  "app_id": "a1597866",
+  "app_id": "8564cd6e",
   "gulpStartupTasks": [
     "sass",
     "watch"
