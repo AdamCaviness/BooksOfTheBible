@@ -28,6 +28,11 @@ angular.module('botb', [
   });
 })
 
+.config(['$ionicConfigProvider', function($ionicConfigProvider) {
+  // force tabs on bottom (http://tinyurl.com/ionicbottomtabs)
+  $ionicConfigProvider.tabs.position('bottom');
+}])
+
 .config(function($stateProvider, $urlRouterProvider) {
 
   // Ionic uses AngularUI Router which uses the concept of states
@@ -43,7 +48,7 @@ angular.module('botb', [
     templateUrl: "templates/tabs.html"
   })
 
-  // Each tab has its own nav history stack:
+  // each tab has its own nav history stack:
 
   .state('tab.quiz', {
     url: '/quiz',
