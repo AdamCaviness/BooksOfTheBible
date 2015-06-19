@@ -1,15 +1,22 @@
 /* Override tab styles */
 
 .tabs-background-unique .tabs, .tabs-background-unique > .tabs {
-  background-color: #65DDE4;
-  background-image: linear-gradient(0deg, #5BC6CC, #5BC6CC 50%, transparent 50%);
-  border-color: #5BC6CC; }
+  background-color: #424242;
+  border-color: #AEFAFF;
+}
 
 .tabs-striped.tabs-color-light .tab-item {
-  color: rgba(255, 255, 255, 0.8);
-  opacity: 1; }
+  color: rgba(174, 250, 255, 0.8);
+  opacity: 1;
+}
 .tabs-striped.tabs-color-light .tab-item .badge {
-  opacity: 0.8; }
+  opacity: 0.8;
+}
+.tabs-striped.tabs-color-light .tab-item.tab-item-active, .tabs-striped.tabs-color-light .tab-item.active, .tabs-striped.tabs-color-light .tab-item.activated {
+    margin-top: -2px;
+    color: #AEFAFF;
+    border: 0 solid #AEFAFF;
+    border-top-width: 2px; }
 
 /* Quizzes */
 .quiz-center {
