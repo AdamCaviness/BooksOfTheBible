@@ -1,6 +1,6 @@
 /// <reference path="../../typings/tsd.d.ts" />
 
-angular.module('bothb.services', [])
+angular.module('botb.services', [])
 
 .factory('$exceptionHandler', function($log) {
   return function (exception, cause) {

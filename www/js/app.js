@@ -1,20 +1,17 @@
 /* global StatusBar */
 /// <reference path="../../typings/tsd.d.ts" />
 
-// BOTHB - Books of the Bible
+// BOTB - Books of the Bible
 
 // angular.module is a global place for creating, registering and retrieving Angular modules
-// 'bothb' is the name of this angular module (also set in a <body> attribute in index.html)
+// 'botb' is the name of this angular module (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-// 'bothb.services' is found in services.js
-// 'bothb.controllers' is found in controllers.js
-angular.module('bothb', [
+// 'botb.services' is found in services.js
+// 'botb.controllers' is found in controllers.js
+angular.module('botb', [
   'ionic',
-  'ngCordova',
-  'ionic.service.core', 
-  'ionic.service.push',  
-  'bothb.controllers', 
-  'bothb.services'
+  'botb.controllers', 
+  'botb.services'
 ])
 
 .run(function($ionicPlatform) {
@@ -30,20 +27,6 @@ angular.module('bothb', [
     }
   });
 })
-
-.config(['$ionicAppProvider', function($ionicAppProvider) {
-  // Identify app
-  $ionicAppProvider.identify({
-    // The App ID (from apps.ionic.io) for the server
-    app_id: 'a1597866',
-    // The public API key all services will use for this app
-    api_key: 'ca4682010b345ab257660534f1532ab4ed71f57fd283ba12',
-    // The GCM project number
-    gcm_id: '101190536232',
-    // Set the app to use development pushes
-    dev_push: true
-  });
-}])
 
 .config(function($stateProvider, $urlRouterProvider) {
 

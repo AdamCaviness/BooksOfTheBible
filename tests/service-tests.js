@@ -2,7 +2,7 @@
 
 describe('getting books', function() {
 	var Books;
-	beforeEach(module('bothb.services'));
+	beforeEach(module('botb.services'));
 	
 	beforeEach(inject(function (_Books_) {
         Books = _Books_;
