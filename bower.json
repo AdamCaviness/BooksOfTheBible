@@ -8,6 +8,5 @@
     "angular-mocks": "latest"
   },
   "dependencies": {
-    "csshake": "*"
   }
 }
