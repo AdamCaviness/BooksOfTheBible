@@ -10,7 +10,7 @@ angular.module('botb.controllers', [])
   //
   //$scope.$on('$ionicView.enter', function(e) {
   //});
-  
+
   $scope.quizzes = Quizzes.all();
   $scope.remove = function(quiz) {
     Quizzes.remove(quiz);
@@ -23,17 +23,17 @@ angular.module('botb.controllers', [])
   $scope.correctBookIndex = $scope.currentBookIndex + 1;
   $scope.books = Books.randomSelection($scope.correctBookIndex, 5);
   $scope.quiz = Quizzes.get($stateParams.quizId);
- 
+
   $scope.onBookTap = function(event, book) {
     console.log('Book tapped: ' + book.name);
     console.log('Book tapped: id = ' + book.id);
     var button = angular.element(event.target);
     console.log('button is ' + button);
-    
+
     if ($scope.correctBookIndex === book.id) {
       $scope.currentBookIndex = book.id;
       $scope.correctBookIndex = $scope.currentBookIndex + 1;
-      button.removeClass('shake shake-horizontal');
+      button.removeClass('shake');
       button.removeClass('button-assertive');
       button.addClass('button-balanced');
       $timeout(function() {
@@ -43,17 +43,17 @@ angular.module('botb.controllers', [])
     }
     else {
       button.addClass('button-assertive');
-      button.addClass('shake shake-horizontal');
+      button.addClass('shake');
       $timeout(function() {
         button.removeClass('button-assertive');
-        button.removeClass('shake shake-horizontal');
+        button.removeClass('shake');
       }, 200);
     }
   };
 })
 
 .controller('StatsCtrl', function($scope) {
-  
+
 })
 
 .controller('DonateCtrl', function($scope) {
