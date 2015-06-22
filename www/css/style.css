@@ -1,3 +1,24 @@
+.pane {
+  background-color: #555;
+}
+.item-content.activated {
+    background-color: #424242 !important;
+}
+.item {
+  border-color: #444;
+}
+.item .item-content {
+  background-color: #777;
+}
+
+.item h2 {
+    color: #FFF;
+}
+.item p {
+    color: #DDD;
+}
+
+
 /* Override tab styles */
 
 .tabs-background-unique .tabs, .tabs-background-unique > .tabs {
@@ -6,7 +27,7 @@
 }
 
 .tabs-striped.tabs-color-light .tab-item {
-  color: rgba(174, 250, 255, 0.8);
+  color: rgba(101, 221, 228, 0.8);
   opacity: 1;
 }
 .tabs-striped.tabs-color-light .tab-item .badge {
@@ -14,8 +35,8 @@
 }
 .tabs-striped.tabs-color-light .tab-item.tab-item-active, .tabs-striped.tabs-color-light .tab-item.active, .tabs-striped.tabs-color-light .tab-item.activated {
     margin-top: -2px;
-    color: #AEFAFF;
-    border: 0 solid #AEFAFF;
+    color: #65DDE4;
+    border: 0 solid #65DDE4;
     border-top-width: 2px; }
 
 /* Quizzes */
