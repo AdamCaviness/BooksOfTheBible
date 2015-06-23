@@ -63,22 +63,22 @@
   color: red; }
 
 .pane {
-  background-color: #555; }
+  background-color: #555555; }
 
 .item-content.activated {
   background-color: #424242 !important; }
 
 .item {
-  border-color: #444; }
+  border-color: #424242; }
 
 .item .item-content {
-  background-color: #777; }
+  background-color: #777777; }
 
 .item h2 {
-  color: #FFF; }
+  color: #FFFFFF; }
 
 .item p {
-  color: #DDD; }
+  color: #DDDDDD; }
 
 /* Override tab styles */
 .tabs-background-unique .tabs, .tabs-background-unique > .tabs {
@@ -86,7 +86,7 @@
   border-color: #424242; }
 
 .tabs-striped.tabs-color-light .tab-item {
-  color: rgba(101, 221, 228, 0.8);
+  color: rgba(101, 221, 228, 0.6);
   opacity: 1; }
 
 .tabs-striped.tabs-color-light .tab-item .badge {

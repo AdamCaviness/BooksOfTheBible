@@ -1,36 +1,44 @@
 @import '_shake';
 @import '_quiz-score';
 
+$dark-color: #424242;
+$med-color: #555555;
+$light-color: #777777;
+$accent-color: #65DDE4;
+$bright-color: #FFFFFF;
+$near-bright-color: #DDDDDD;
+$translucent-accent-color: transparentize($accent-color, .4);
+
 .pane {
-  background-color: #555;
+  background-color: $med-color;
 }
 .item-content.activated {
-    background-color: #424242 !important;
+    background-color: $dark-color !important;
 }
 .item {
-  border-color: #444;
+  border-color: $dark-color;
 }
 .item .item-content {
-  background-color: #777;
+  background-color: $light-color;
 }
 
 .item h2 {
-    color: #FFF;
+    color: $bright-color;
 }
 .item p {
-    color: #DDD;
+    color: $near-bright-color;
 }
 
 
 /* Override tab styles */
 
 .tabs-background-unique .tabs, .tabs-background-unique > .tabs {
-  background-color: #424242;
-  border-color: #424242;
+  background-color: $dark-color;
+  border-color: $dark-color;
 }
 
 .tabs-striped.tabs-color-light .tab-item {
-  color: rgba(101, 221, 228, 0.8);
+  color: $translucent-accent-color;
   opacity: 1;
 }
 .tabs-striped.tabs-color-light .tab-item .badge {
@@ -38,8 +46,8 @@
 }
 .tabs-striped.tabs-color-light .tab-item.tab-item-active, .tabs-striped.tabs-color-light .tab-item.active, .tabs-striped.tabs-color-light .tab-item.activated {
     margin-top: -2px;
-    color: #65DDE4;
-    border: 0 solid #65DDE4;
+    color: $accent-color;
+    border: 0 solid $accent-color;
     border-top-width: 2px; }
 
 /* Quizzes */
