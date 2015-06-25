@@ -4,13 +4,13 @@
 .shake {
     display:block;
     position:relative;
-    -webkit-animation-name: spaceboots;
+    -webkit-animation-name: shake-animation;
     -webkit-animation-duration: 0.7s;
     -webkit-transform-origin:50% 50%;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear;
 }
-@-webkit-keyframes spaceboots {
+@-webkit-keyframes shake-animation {
     0% { -webkit-transform: translate(4px, 0px) rotate(0deg); }
     10% { -webkit-transform: translate(-4px, 0px) rotate(0deg); }
     20% { -webkit-transform: translate(4px, 0px) rotate(0deg); }

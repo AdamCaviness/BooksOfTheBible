@@ -4,3 +4,6 @@
 node_modules/
 platforms/
 plugins/
+
+www/css/style.css
+www/css/style.min.css

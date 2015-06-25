@@ -1,6 +1,8 @@
 @import '_shake';
 @import '_quiz-score';
 
+$fail-color: #FF0000;
+$pass-color: #00FF00;
 $dark-color: #424242;
 $med-color: #555555;
 $light-color: #777777;
@@ -9,6 +11,16 @@ $bright-color: #FFFFFF;
 $near-bright-color: #DDDDDD;
 $translucent-accent-color: transparentize($accent-color, .4);
 
+.activated{
+  background: transparent !important;
+}
+.pass{
+  background: $pass-color !important;
+}
+.fail{
+  @extend .shake;
+  background: $fail-color !important;
+}
 .pane {
   background-color: $med-color;
 }

@@ -5,6 +5,7 @@
 angular.module('botb.controllers', [])
 
     .controller('QuizCtrl', function ($scope, Quizzes) {
+        'use strict';
         // With the new view caching in Ionic, Controllers are only called
         // when they are recreated or on app start, instead of every page change.
         // To listen for when this page is active (for example, to refresh data),
@@ -20,6 +21,7 @@ angular.module('botb.controllers', [])
     })
 
     .controller('QuizDetailCtrl', function ($scope, $stateParams, $timeout, Quizzes, Books) {
+        'use strict';
         if ($scope.score === undefined) {
             $scope.score = 0;
         }
@@ -39,34 +41,32 @@ angular.module('botb.controllers', [])
             if ($scope.correctBookIndex === book.id) {
                 $scope.currentBookIndex = book.id;
                 $scope.correctBookIndex = $scope.currentBookIndex + 1;
-                button.removeClass('shake');
-                button.removeClass('button-assertive');
-                button.addClass('button-balanced');
+                button.removeClass('fail');
+                button.addClass('pass');
                 $scope.score += 1;
                 $timeout(function () {
-                    button.removeClass('button-balanced');
+                    button.removeClass('pass');
                     $scope.books = Books.randomSelection($scope.correctBookIndex, 5);
                 }, 100);
             } else {
-                button.addClass('button-assertive');
-                button.addClass('shake');
+                button.addClass('fail');
                 $timeout(function () {
-                    button.removeClass('shake');
-                    button.removeClass('button-assertive');
+                    button.removeClass('fail');
                 }, 200);
             }
         };
     })
 
     .controller('StatsCtrl', function ($scope) {
-
+        'use strict';
     })
 
     .controller('DonateCtrl', function ($scope) {
-
+        'use strict';
     })
 
     .controller('SettingsCtrl', function ($scope, $rootScope) {
+        'use strict';
         $scope.settings = {
             gamify: true
         };
