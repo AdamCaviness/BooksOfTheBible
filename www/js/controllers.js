@@ -33,10 +33,7 @@ angular.module('botb.controllers', [])
             if ($scope.runningScore === undefined) {
                 $scope.runningScore = 0;
             }
-            console.log('Book tapped: ' + book.name);
-            console.log('Book tapped: id = ' + book.id);
             var button = angular.element(event.target);
-            console.log('button is ' + button);
 
             if ($scope.correctBookIndex === book.id) {
                 $scope.currentBookIndex = book.id;
