@@ -1,5 +1,5 @@
 /*global angular*/
-/*jslint browser: true, devel: true*/
+/*jslint browser: true, devel: true, plusplus: true*/
 /// <reference path="../../typings/tsd.d.ts" />
 
 angular.module('botb.controllers', [])

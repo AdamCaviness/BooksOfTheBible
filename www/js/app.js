@@ -1,7 +1,7 @@
 /*global angular*/
 /*global cordova*/
 /*global StatusBar*/
-/*jslint browser: true, devel: true*/
+/*jslint browser: true, devel: true, plusplus: true*/
 /// <reference path="../../typings/tsd.d.ts" />
 
 // BOTB - Books of the Bible
@@ -19,6 +19,7 @@ angular.module('botb', [
 ])
 
     .run(function ($ionicPlatform) {
+        'use strict';
         $ionicPlatform.ready(function () {
             // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
             // for form inputs)
@@ -33,12 +34,13 @@ angular.module('botb', [
     })
 
     .config(['$ionicConfigProvider', function ($ionicConfigProvider) {
+        'use strict';
         // force tabs on bottom (http://tinyurl.com/ionicbottomtabs)
         $ionicConfigProvider.tabs.position('bottom');
     }])
 
     .config(function ($stateProvider, $urlRouterProvider) {
-
+        'use strict';
         // Ionic uses AngularUI Router which uses the concept of states
         // Learn more here: https://github.com/angular-ui/ui-router
         // Set up the various states which the app can be in.

@@ -1,14 +1,16 @@
 /*global angular*/
-/*jslint browser: true, devel: true*/
+/*jslint browser: true, devel: true, plusplus: true*/
 /// <reference path="../../typings/tsd.d.ts" />
 
 function randomIntFromInterval(min, max) {
+    'use strict';
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
 angular.module('botb.services', [])
 
     .factory('$exceptionHandler', function ($log) {
+        'use strict';
         return function (exception, cause) {
             if (cause) {
                 $log.error('exception cause:', cause);
@@ -18,6 +20,7 @@ angular.module('botb.services', [])
     })
 
     .factory('Quizzes', function () {
+        'use strict';
         var quizzes = [{
             id: 0,
             name: 'Typo',
@@ -49,6 +52,7 @@ angular.module('botb.services', [])
     })
 
     .factory('Books', function () {
+        'use strict';
         var books = [
             {
                 id: 0,
