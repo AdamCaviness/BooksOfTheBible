@@ -1,7 +1,10 @@
 <ion-view view-title="{{quiz.name}}">
-  <ion-content class="quiz-center">
-      <p ng-repeat="book in books">
-        <button id="bookButton" class="button button-outline button-light icon icon-left book-tag" on-tap="onBookTap($event, {{book}});">{{book.name}}</button>
-      </p>
-  </ion-content>
+    <ion-content>
+        <div class="running-score">{{runningScore}}</div>
+    </ion-content>
+    <ion-content class="quiz-center">
+        <p ng-repeat="book in books">
+            <button id="bookButton" class="button button-outline button-light icon icon-left book-tag" on-tap="onBookTap($event, {{book}});">{{book.name}}</button>
+        </p>
+    </ion-content>
 </ion-view>

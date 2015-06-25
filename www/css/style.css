@@ -71,6 +71,12 @@
 .fail {
   background: #FF2F2A !important; }
 
+.running-score {
+  padding: 10%;
+  float: right;
+  font-size: 2em;
+  color: #65DDE4; }
+
 .pane {
   background-color: #555555; }
 

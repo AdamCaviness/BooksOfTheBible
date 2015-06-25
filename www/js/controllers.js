@@ -20,19 +20,19 @@ angular.module('botb.controllers', [])
         };
     })
 
-    .controller('QuizDetailCtrl', function ($scope, $stateParams, $timeout, Quizzes, Books) {
+    .controller('QuizDetailCtrl', function ($scope, $state, $stateParams, $timeout, Quizzes, Books) {
         'use strict';
-        if ($scope.score === undefined) {
-            $scope.score = 0;
-        }
 
-        $scope.bookActivated = false;
+        var bookCount = Books.all().length;
         $scope.currentBookIndex = -1;
         $scope.correctBookIndex = $scope.currentBookIndex + 1;
         $scope.books = Books.randomSelection($scope.correctBookIndex, 5);
         $scope.quiz = Quizzes.get($stateParams.quizId);
 
         $scope.onBookTap = function (event, book) {
+            if ($scope.runningScore === undefined) {
+                $scope.runningScore = 0;
+            }
             console.log('Book tapped: ' + book.name);
             console.log('Book tapped: id = ' + book.id);
             var button = angular.element(event.target);
@@ -41,15 +41,19 @@ angular.module('botb.controllers', [])
             if ($scope.correctBookIndex === book.id) {
                 $scope.currentBookIndex = book.id;
                 $scope.correctBookIndex = $scope.currentBookIndex + 1;
-                button.removeClass('fail');
                 button.addClass('pass');
-                $scope.score += 1;
+                $scope.runningScore += 12;
                 $timeout(function () {
                     button.removeClass('pass');
-                    $scope.books = Books.randomSelection($scope.correctBookIndex, 5);
+                    if ($scope.correctBookIndex < bookCount) {
+                        $scope.books = Books.randomSelection($scope.correctBookIndex, 5);
+                    } else {
+                        $state.go('tab.stats');
+                    }
                 }, 100);
             } else {
                 button.addClass('fail');
+                $scope.runningScore -= 12;
                 $timeout(function () {
                     button.removeClass('fail');
                 }, 200);
