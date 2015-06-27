@@ -8,5 +8,6 @@
     "angular-mocks": "latest"
   },
   "dependencies": {
+    "animate-css": "~3.3.0"
   }
 }

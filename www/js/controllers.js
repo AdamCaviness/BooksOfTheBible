@@ -23,7 +23,9 @@ angular.module('botb.controllers', [])
     .controller('QuizDetailCtrl', function ($scope, $state, $stateParams, $timeout, Quizzes, Books) {
         'use strict';
 
-        var bookCount = Books.all().length;
+        var allBooks, allBookCount;
+        allBooks = Books.all();
+        allBookCount = allBooks.length;
         $scope.currentBookIndex = -1;
         $scope.correctBookIndex = $scope.currentBookIndex + 1;
         $scope.books = Books.randomSelection($scope.correctBookIndex, 5);
@@ -33,16 +35,20 @@ angular.module('botb.controllers', [])
             if ($scope.runningScore === undefined) {
                 $scope.runningScore = 0;
             }
+            if ($scope.prevBookName === undefined) {
+                $scope.prevBookName = '';
+            }
             var button = angular.element(event.target);
 
             if ($scope.correctBookIndex === book.id) {
                 $scope.currentBookIndex = book.id;
+                $scope.prevBookName = allBooks[$scope.currentBookIndex].name;
                 $scope.correctBookIndex = $scope.currentBookIndex + 1;
                 button.addClass('pass');
                 $scope.runningScore += 12;
                 $timeout(function () {
                     button.removeClass('pass');
-                    if ($scope.correctBookIndex < bookCount) {
+                    if ($scope.correctBookIndex < allBookCount) {
                         $scope.books = Books.randomSelection($scope.correctBookIndex, 5);
                     } else {
                         $state.go('tab.stats');

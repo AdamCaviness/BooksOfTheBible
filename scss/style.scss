@@ -27,6 +27,13 @@ $translucent-accent-color: transparentize($accent-color, .4);
     font-size: 2em;
     color: $accent-color;
 }
+.prev-book {
+    padding-top: 10%;
+    padding-left: 5%;
+    align-items: center;
+    font-size: 1.7em;
+    color: transparentize($accent-color, .9);
+}
 .pane {
     background-color: $med-color;
 }
@@ -46,14 +53,12 @@ $translucent-accent-color: transparentize($accent-color, .4);
     color: $near-bright-color;
 }
 
-
 /* Override tab styles */
 
 .tabs-background-unique .tabs, .tabs-background-unique > .tabs {
     background-color: $dark-color;
     border-color: $dark-color;
 }
-
 .tabs-striped.tabs-color-light .tab-item {
     color: $translucent-accent-color;
     opacity: 1;

@@ -6,12 +6,6 @@
 
 // BOTB - Books of the Bible
 
-// angular.module is a global place for creating, registering and retrieving Angular modules
-// 'botb' is the name of this angular module (also set in a <body> attribute in index.html)
-// the 2nd parameter is an array of 'requires'
-// 'botb.services' is found in services.js
-// 'botb.controllers' is found in controllers.js
-
 angular.module('botb', [
     'ionic',
     'botb.controllers',
@@ -33,11 +27,11 @@ angular.module('botb', [
         });
     })
 
-    .config(['$ionicConfigProvider', function ($ionicConfigProvider) {
+    .config(function ($ionicConfigProvider) {
         'use strict';
         // force tabs on bottom (http://tinyurl.com/ionicbottomtabs)
         $ionicConfigProvider.tabs.position('bottom');
-    }])
+    })
 
     .config(function ($stateProvider, $urlRouterProvider) {
         'use strict';
