@@ -1,7 +1,7 @@
 <ion-view view-title="{{quiz.name}}">
     <ion-content>
         <div class="running-score">{{runningScore}}</div>
-        <div class="prev-book">{{prevBookName}}</div>
+        <div class="prev-book" ng-class="{'animated fadeIn': pass}">{{prevBookName}}</div>
     </ion-content>
     <ion-content class="quiz-center">
         <p ng-repeat="book in books">

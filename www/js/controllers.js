@@ -38,14 +38,17 @@ angular.module('botb.controllers', [])
             if ($scope.prevBookName === undefined) {
                 $scope.prevBookName = '';
             }
-            var button = angular.element(event.target);
+            var button, prevBookDiv;
+            button = angular.element(event.target);
+            prevBookDiv = angular.element(document.getElementById('prevBookDiv'));
 
             if ($scope.correctBookIndex === book.id) {
                 $scope.currentBookIndex = book.id;
                 $scope.prevBookName = allBooks[$scope.currentBookIndex].name;
                 $scope.correctBookIndex = $scope.currentBookIndex + 1;
-                button.addClass('pass');
                 $scope.runningScore += 12;
+                button.addClass('pass');
+                $scope.pass = true;
                 $timeout(function () {
                     button.removeClass('pass');
                     if ($scope.correctBookIndex < allBookCount) {
@@ -54,8 +57,12 @@ angular.module('botb.controllers', [])
                         $state.go('tab.stats');
                     }
                 }, 100);
+                $timeout(function () {
+                    $scope.pass = false;
+                }, 500);
             } else {
                 button.addClass('fail');
+                $scope.pass = false;
                 $scope.runningScore -= 12;
                 $timeout(function () {
                     button.removeClass('fail');
