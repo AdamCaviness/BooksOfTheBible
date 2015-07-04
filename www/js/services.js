@@ -23,13 +23,8 @@ angular.module('botb.services', [])
         'use strict';
         var quizzes = [{
             id: 0,
-            name: 'Typo',
-            quizDesc: 'Type the book name',
-            symbology: './img/typo.png'
-        }, {
-            id: 1,
-            name: 'Pick-nic',
-            quizDesc: 'Pick from a list',
+            name: 'Picnic',
+            quizDesc: 'Quickly pick from a list',
             symbology: './img/pick.png'
         }];
         return {

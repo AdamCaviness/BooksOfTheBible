@@ -79,12 +79,12 @@ angular.module('botb', [
                 }
             })
 
-            .state('tab.donate', {
-                url: '/donate',
+            .state('tab.upgrade', {
+                url: '/upgrade',
                 views: {
-                    'tab-donate': {
-                        templateUrl: 'templates/tab-donate.html',
-                        controller: 'DonateCtrl'
+                    'tab-upgrade': {
+                        templateUrl: 'templates/tab-upgrade.html',
+                        controller: 'UpgradeCtrl'
                     }
                 }
             })

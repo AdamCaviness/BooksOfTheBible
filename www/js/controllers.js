@@ -75,7 +75,7 @@ angular.module('botb.controllers', [])
         'use strict';
     })
 
-    .controller('DonateCtrl', function ($scope) {
+    .controller('UpgradeCtrl', function ($scope) {
         'use strict';
     })
 
