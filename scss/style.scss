@@ -28,11 +28,13 @@ $translucent-accent-color: transparentize($accent-color, .4);
     color: $accent-color;
 }
 .prev-book {
+    -webkit-animation-duration: 4s;
+    -webkit-animation-delay: 3s;
     padding-top: 10%;
     padding-left: 5%;
     align-items: center;
     font-size: 1.7em;
-    color: transparentize($light-color, .31
+    color: transparentize($light-color, .3);
 }
 .pane {
     background-color: $med-color;

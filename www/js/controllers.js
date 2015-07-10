@@ -38,17 +38,16 @@ angular.module('botb.controllers', [])
             if ($scope.prevBookName === undefined) {
                 $scope.prevBookName = '';
             }
-            var button, prevBookDiv;
-            button = angular.element(event.target);
-            prevBookDiv = angular.element(document.getElementById('prevBookDiv'));
+            var button = angular.element(event.target);
 
             if ($scope.correctBookIndex === book.id) {
                 $scope.currentBookIndex = book.id;
                 $scope.prevBookName = allBooks[$scope.currentBookIndex].name;
                 $scope.correctBookIndex = $scope.currentBookIndex + 1;
                 $scope.runningScore += 12;
+                $scope.animationClass = '';
+                $scope.animationClass = 'animated fadeIn';
                 button.addClass('pass');
-                $scope.pass = true;
                 $timeout(function () {
                     button.removeClass('pass');
                     if ($scope.correctBookIndex < allBookCount) {
@@ -58,11 +57,10 @@ angular.module('botb.controllers', [])
                     }
                 }, 100);
                 $timeout(function () {
-                    $scope.pass = false;
-                }, 500);
+                    $scope.animationClass = '';
+                }, 7000);
             } else {
                 button.addClass('fail');
-                $scope.pass = false;
                 $scope.runningScore -= 12;
                 $timeout(function () {
                     button.removeClass('fail');
